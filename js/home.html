@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-2">
+            <div>
+              <div>
+                <div class="stats shadow flex justify-center items-center">
+                    <div class="stat text-center">
+                      <div class="stat-title font-bold">Balance</div>
+                      <div id="balance" class="stat-value font-medium text-[2rem]">9400</div>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="grid grid-cols-3 gap-1">
+                    <button id="add-money" class="btn btn-lg">Add Money</button>
+                    <button id="cash-out" class="btn btn-lg">Cash Out</button>
+                    <button id="transaction-btn" class="btn btn-lg">Transaction</button>
+                  </div>
+              </div>
+              <div id="divider" class="divider hidden"></div>
+              <!-- add money section start -->
+              <div id="add-money-section" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input type="text" placeholder="Enter Your Amount" class="input input-bordered" id="input-money" required autocomplete="off" />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input type="password" placeholder="Enter Your Pin Number" class="input input-bordered" id="input-pin" required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                  </div>
+                </form>
+              </div>
+              <!-- add money section end -->
+
+              <!-- cash out section start -->
+              <div id="cash-out-section" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="input-money-out" type="text" placeholder="Enter Your Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input id="input-pin-out" type="password" placeholder="Enter Your Pin Number" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                  </div>
+                </form>
+              </div>
+              <!-- cash out section end -->
+              <!-- transaction section start -->
+              <div id="transaction-section" class="hidden text-center">
+                <h2 class="text-2xl text-center">Transaction History</h2>
+              </div>
+              <!-- transaction section end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="library.js"></script>
+    <script src="addandout.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>
